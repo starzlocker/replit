@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+// 40h semanais, 4 semanas
+
+float calc_extra(int horas, float salario_horas) {
+  float salario_base = 160 * salario_horas;
+  if(horas <= 160) {
+    return salario_base;
+  } else {
+    float extra = (horas - 160) * salario_horas;
+    return salario_base + (extra * 0.50);
+  }
+  return 0;
+}
+
+int main() {
+  int horas;
+  float salario_hora;
+  float salario_final;
+
+  printf("Digite o total de horas trabalhadas no mês: (mínimo 160h por mes)\n");
+  scanf("%d", &horas);
+
+  printf("Qual a remuneração horária?\n");
+  scanf("%f", &salario_hora);
+
+  salario_final = calc_extra(horas, salario_hora);
+
+  printf("Salário final é R$%.2f", salario_final);
+
+  return 0;
+}

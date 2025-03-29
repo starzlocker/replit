@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+  int conta;
+  float saldo, debito, credito;
+
+  printf("Digite o núnero da conta: "):
+  scanf("%d", &conta);
+  printf("Digite o saldo: ");
+  scanf("%f", &saldo);
+  printf("Digite o débito: ");
+  scanf("%f", &debito);
+  printf("Digite o crédito: ");
+  scanf("%f", &credito);
+  float saldo_final = saldo - debito + credito;
+
+  if (saldo_final >= 0) {
+    printf("Saldo positivo");
+  } else {
+    printf("Saldo negativo");
+  }
+
+  return 0;
+}

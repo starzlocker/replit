@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int celciusConverter(float temp) {
+  return temp * 1.8 + 32;
+}
+
+int main() {
+  float temp;
+  float converted_temp;
+
+  printf("Digite a temperatura em Celcius: ");
+  scanf("%f", &temp);
+
+  converted_temp = celciusConverter(temp);
+
+  printf("A temperatura %.1fC é equivalente à %.1fF", temp, converted_temp);
+
+
+  return 0;
+}

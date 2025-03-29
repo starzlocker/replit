@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+  int ano_nasc;
+  int ano_atual;
+  int idade;
+  int idade_dias;
+  int idade_semanas;
+  int idade_meses;
+
+  printf("Digite seu ano de nascimento: ");
+  scanf("%d", &ano_nasc);
+
+  printf("Digite o ano atual: ");
+  scanf("%d", &ano_atual);
+
+  idade = ano_atual - ano_nasc;
+  idade_dias = idade * 365;
+  idade_semanas = idade_dias / 7;
+  idade_meses = idade_dias / 30;
+
+  printf("Voce tem %d anos\n", idade);
+  printf("Voce tem %d meses\n", idade_meses);
+  printf("Voce tem %d semanas\n", idade_semanas);
+  printf("Voce tem %d dias", idade_dias);
+
+  return 0;
+}
