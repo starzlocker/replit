@@ -1,8 +1,0 @@
-f = g + (h - 5)
-
-x5 = f
-x6 = g
-x7 = h
-
-addi x5, x7, -5
-add x5, x5, x6
